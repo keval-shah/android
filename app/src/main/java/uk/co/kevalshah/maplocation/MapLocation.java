@@ -2,8 +2,12 @@ package uk.co.kevalshah.maplocation;
 
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 
 
 public class MapLocation extends ActionBarActivity {
@@ -12,6 +16,15 @@ public class MapLocation extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_map_location);
+        final EditText addressText = (EditText) findViewById(R.id.addressEditText);
+        final Button mapButton = (Button) findViewById(R.id.mapButton);
+        mapButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                final String address = addressText.getText().toString();
+                Log.d("MapLocation", "address was " + address);
+            }
+        });
     }
 
     @Override
