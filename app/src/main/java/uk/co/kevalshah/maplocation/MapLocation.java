@@ -1,5 +1,7 @@
 package uk.co.kevalshah.maplocation;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -21,8 +23,12 @@ public class MapLocation extends ActionBarActivity {
         mapButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                final String address = addressText.getText().toString();
+                String address = addressText.getText().toString();
                 Log.d("MapLocation", "address was " + address);
+                address = address.replace(' ', '+');
+                final String uri = "geo:0,0?q=" + address;
+                final Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(uri));
+                startActivity(intent);
             }
         });
     }
