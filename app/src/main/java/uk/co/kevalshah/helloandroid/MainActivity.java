@@ -7,20 +7,26 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 
 
 public class MainActivity extends ActionBarActivity {
+
+    public final static String USER_NAME = "uk.co.kevalshah.helloandroid.USER_NAME";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        final Button submitButton = (Button) findViewById(R.id.go_button);
+        final EditText nameEditText = (EditText) findViewById(R.id.nameField);
+        final Button submitButton = (Button) findViewById(R.id.goButton);
         submitButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                final String name = nameEditText.getText().toString();
                 final Intent helloIntent = new Intent(MainActivity.this, HelloActivity.class);
+                helloIntent.putExtra(USER_NAME, name);
                 startActivity(helloIntent);
             }
         });
