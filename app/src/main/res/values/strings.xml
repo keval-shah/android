@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">ModernArtUI</string>
 
-    <string name="hello_world">Hello world!</string>
-    <string name="action_settings">Settings</string>
+    <string name="action_more_information">More Information</string>
+    <string name="button_not_now">Not Now</string>
+    <string name="button_visit_moma">Visit MOMA</string>
+    <string name="dialog_text">My attempt at \'Modern Art\'. Visit MOMA for some better examples.</string>
 </resources>
