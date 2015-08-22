@@ -47,7 +47,6 @@ public class MainActivity extends AppCompatActivity implements SeekBar.OnSeekBar
                 calcNewValue(Color.red(originalColour), Color.red(targetColour), percentage),
                 calcNewValue(Color.green(originalColour), Color.green(targetColour), percentage),
                 calcNewValue(Color.blue(originalColour), Color.blue(targetColour), percentage)));
-//        view.invalidate();
     }
 
     private int calcNewValue(final int start, final int stop, final int percentage) {
