@@ -1,4 +1,4 @@
-package uk.co.kevalshah.modenartui;
+package uk.co.kevalshah.modernartui;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;

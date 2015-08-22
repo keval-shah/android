@@ -1,4 +1,4 @@
-package uk.co.kevalshah.modenartui;
+package uk.co.kevalshah.modernartui;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;
